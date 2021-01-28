@@ -11,14 +11,9 @@ class Player
   end
 #Méthode show des stats
   def show_state
-    print "     #{@name}, signe : #{@sign} , a #{@points} points."
+    print "     #{@name}, signe : #{@sign} "
   end
-#Méthode de comptage des points
-  #def round_wins_result
-  #    @player1.points = @points + 1
-  #end
 end
-
 #Classes d'attribution des signes
 class Player1 < Player
   attr_accessor :sign
@@ -32,7 +27,7 @@ end
 class Player2 < Player
   attr_accessor :sign
   def initialize(name)
-    @sign = ("○")
+    @sign = ("◎")
 
     super(name)
   end

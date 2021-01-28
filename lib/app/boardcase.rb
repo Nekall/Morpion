@@ -11,38 +11,48 @@ class Play_case
 #Remplace la case selectionné par une croix
   def replace_by_cross(selecase)
     if(@board.include?(selecase) == true)
-      then  @board.map! do |c|
+      then @board.map! do |c|
             if(c == selecase)
-              then c = " ✘"
+              then c = "✘ "
               else c = c
             end
           end
       else puts "Case deja selectionné"
+          sleep(1)
     end
   end
 #Remplace la case selectionné par un cercle
-def replace_by_circle(selecase)
-  if(@board.include?(selecase) == true)
-    then  @board.map! do |c|
-          if(c == selecase)
-            then c = " ○"
-            else c = c
+  def replace_by_circle(selecase)
+    if(@board.include?(selecase) == true)
+      then @board.map! do |c|
+            if(c == selecase)
+              then c = "◎ "
+              else c = c
+            end
           end
-        end
-    else puts "Case deja selectionné"
+      else puts "Case deja selectionné"
+          sleep(1)
+    end
   end
-end
 #Affiche du board
   def to_s
-    puts "    ╔═══╦═══╦═══╗"
-    puts "    ║ A ║ B ║ C ║"
-    puts "╔═══╬═══════════╣"
-    puts "║ 1 ║#{@board[0..2].join(" ║ ")}║"
-    puts "╠═══╬═══╬═══╬═══╣"
-    puts "║ 2 ║#{@board[3..5].join(" ║ ")}║"
-    puts "╠═══╬═══╬═══╬═══╣"
-    puts "║ 3 ║#{@board[6..8].join(" ║ ")}║"
-    puts "╚═══╚═══════════╝"
+    @array_copy = @board.map do |check|
+      if(check != "◎ " && check != "✘ ")
+        then (check = "  ")
+      else check = check
+      end
+    end
+    puts " "
+    puts "                ╔═══╦═══╦═══╗"
+    puts "                ║ 1 ║ 2 ║ 3 ║"
+    puts "            ╔═══╬═══╬═══╬═══╣"
+    puts "            ║ A ║ #{@array_copy[0..2].join("║ ")}║"
+    puts "            ╠═══╬═══╬═══╬═══╣"
+    puts "            ║ B ║ #{@array_copy[3..5].join("║ ")}║"
+    puts "            ╠═══╬═══╬═══╬═══╣"
+    puts "            ║ C ║ #{@array_copy[6..8].join("║ ")}║"
+    puts "            ╚═══╩═══╩═══╩═══╝"
+    puts " "
   end
 #Méthode c'est gagné en horizontale ?
   def check_win_in_horizon?
@@ -78,6 +88,5 @@ end
     end
   end
 end
-
 #binding.pry
 #puts "C'est la fin"
