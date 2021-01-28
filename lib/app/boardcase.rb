@@ -6,25 +6,78 @@ class Play_case
 
 #Initialise l'array qui constitue le board
   def initialize
-    @@board = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"]
-    return @@board
+    @board = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"]
   end
-#Montre le borde en array simple
-  def show_board
-    puts @@board
+#Remplace la case selectionné par une croix
+  def replace_by_cross(selecase)
+    if(@board.include?(selecase) == true)
+      then  @board.map! do |c|
+            if(c == selecase)
+              then c = " ✘"
+              else c = c
+            end
+          end
+      else puts "Case deja selectionné"
+    end
   end
-#Remplace le case selectionné par un signe
-  def replace_by_sign(selecase)
-    @selecase = selecase
-    @@board.map! do |c|
-      if(c == @selecase)
-        then c = "COUCOU"
-        else c = c
-      end
+#Remplace la case selectionné par un cercle
+def replace_by_circle(selecase)
+  if(@board.include?(selecase) == true)
+    then  @board.map! do |c|
+          if(c == selecase)
+            then c = " ○"
+            else c = c
+          end
+        end
+    else puts "Case deja selectionné"
+  end
+end
+#Affiche du board
+  def to_s
+    puts "    ╔═══╦═══╦═══╗"
+    puts "    ║ A ║ B ║ C ║"
+    puts "╔═══╬═══════════╣"
+    puts "║ 1 ║#{@board[0..2].join(" ║ ")}║"
+    puts "╠═══╬═══╬═══╬═══╣"
+    puts "║ 2 ║#{@board[3..5].join(" ║ ")}║"
+    puts "╠═══╬═══╬═══╬═══╣"
+    puts "║ 3 ║#{@board[6..8].join(" ║ ")}║"
+    puts "╚═══╚═══════════╝"
+  end
+#Méthode c'est gagné en horizontale ?
+  def check_win_in_horizon?
+    if(@board[0] == @board[1] && @board[1] == @board[2])
+      then return true
+    end
+    if(@board[3] == @board[4] && @board[4] == @board[5])
+      then return true
+    end
+    if(@board[6] == @board[7] && @board[7] == @board[8])
+      then return true
+    end
+  end
+#Méthode c'est gagné en horizontale ?
+  def check_win_in_vertical?
+    if(@board[0] == @board[3] && @board[3] == @board[6])
+      then return true
+    end
+    if(@board[1] == @board[4] && @board[4] == @board[7])
+      then return true
+    end
+    if(@board[2] == @board[5] && @board[5] == @board[8])
+      then return true
+    end
+  end
+#Méthode c'est gagné en diagonale ?
+  def check_win_in_diagonal?
+    if(@board[0] == @board[4] && @board[4] == @board[8])
+      then return true
+    end
+    if(@board[2] == @board[4] && @board[4] == @board[6])
+      then return true
     end
   end
 end
-
 
 #binding.pry
 #puts "C'est la fin"

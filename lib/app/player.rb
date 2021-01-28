@@ -3,8 +3,6 @@
 class Player
   attr_accessor :name
   attr_accessor :points
-  attr_accessor :player
-
 
 #Methode d'attribution des noms et init des scores
   def initialize(name)
@@ -12,8 +10,8 @@ class Player
     @points = 0
   end
 #Méthode show des stats
-  def show_stats
-    print "#{@name}, signe : #{@@sign} a #{@points} points."
+  def show_state
+    print "     #{@name}, signe : #{@sign} , a #{@points} points."
   end
 #Méthode de comptage des points
   #def round_wins_result
@@ -25,7 +23,7 @@ end
 class Player1 < Player
   attr_accessor :sign
   def initialize(name)
-    @@sign = ("✘")
+    @sign = ("✘")
 
     super(name)
   end
@@ -34,7 +32,7 @@ end
 class Player2 < Player
   attr_accessor :sign
   def initialize(name)
-    @@sign = ("○")
+    @sign = ("○")
 
     super(name)
   end
