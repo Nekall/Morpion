@@ -1,17 +1,17 @@
-❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ 
-Projet codé en peer-learning avec : https://github.com/ZugastiKevin/ ت
-❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ 
-
-【JEU DU MORPION】
-
-version final : 
--Bug non fixe 
-> le tour passe à l'autre joueur s'il entre une case déjà prise.
-> affichage du message de victoir non optimisé.
-
-_______________________________________________________________________
-
-•Deux joueurs, le but est de faire une ligne (diagonale, horizontale ou verticale)
- avec soit des croix, soit des cercles. 
- 
+❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ <br>
+Projet codé en peer-learning avec : https://github.com/ZugastiKevin/ <br>ت
+❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ ❍ ✘ <br>
+<br>
+【JEU DU MORPION】<br>
+<br>
+version final : <br>
+-Bug non fixe <br>
+> le tour passe à l'autre joueur s'il entre une case déjà prise.<br>
+> affichage du message de victoir non optimisé.<br>
+<br>
+_______________________________________________________________________<br>
+<br>
+•Deux joueurs, le but est de faire une ligne (diagonale, horizontale ou verticale)<br>
+ avec soit des croix, soit des cercles. <br>
+ <br>
  
