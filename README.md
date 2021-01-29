@@ -29,7 +29,7 @@ _______________________________________________________________________<br>
 ║ C ║ ✘ ║ ❍ ║ ✘ ║
 ╚═══╩═══╩═══╩═══╝
 ```
-
+<br>
 I N T R O
 _________
 Rien de tel que de coder un jeu pour solidifier ses bases en POO ! Nous allons donc créer un jeu de morpion, jeu hautement stratégique et follement passionnant s'il en est.
