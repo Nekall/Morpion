@@ -16,4 +16,14 @@ _______________________________________________________________________<br>
 •Deux joueurs, le but est de faire une ligne (diagonale, horizontale ou verticale)<br>
  avec soit des croix, soit des cercles. <br>
  <br>
- 
+<br>
+    ╔═══╦═══╦═══╗<br>
+    ║ 1 ║ 2 ║ 3 ║<br>
+╔═══╬═══╬═══╬═══╣<br>
+║ A ║   ║   ║   ║<br>
+╠═══╬═══╬═══╬═══╣<br>
+║ B ║   ║   ║   ║<br>
+╠═══╬═══╬═══╬═══╣<br>
+║ C ║   ║   ║   ║<br>
+╚═══╩═══╩═══╩═══╝<br>
+<br>
