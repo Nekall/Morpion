@@ -30,8 +30,8 @@ _______________________________________________________________________<br>
 ╚═══╩═══╩═══╩═══╝
 ```
 <br>
-I N T R O
-_________
+I N T R O<br>
+_________<br>
 Rien de tel que de coder un jeu pour solidifier ses bases en POO ! Nous allons donc créer un jeu de morpion, jeu hautement stratégique et follement passionnant s'il en est.
 
 Pour ceux qui ne sont pas passé par la case morpion dans leur enfance (ou leur adolescence pour les moins hygiéniques), on vous précise 8 comportements attendus de la part du programme (par ordre d'importance) :
