@@ -26,7 +26,7 @@ class Play_case
     if(@board.include?(selecase) == true)
       then @board.map! do |c|
             if(c == selecase)
-              then c = "◎ "
+              then c = "❍ "
               else c = c
             end
           end
@@ -37,7 +37,7 @@ class Play_case
 #Affiche du board
   def to_s
     @array_copy = @board.map do |check|
-      if(check != "◎ " && check != "✘ ")
+      if(check != "❍ " && check != "✘ ")
         then (check = "  ")
       else check = check
       end

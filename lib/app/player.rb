@@ -7,11 +7,10 @@ class Player
 #Methode d'attribution des noms et init des scores
   def initialize(name)
     @name = name
-    @points = 0
   end
 #Méthode show des stats
   def show_state
-    print "     #{@name}, signe : #{@sign} "
+    print "              #{@name}, signe : #{@sign} "
   end
 end
 #Classes d'attribution des signes
@@ -27,7 +26,7 @@ end
 class Player2 < Player
   attr_accessor :sign
   def initialize(name)
-    @sign = ("◎")
+    @sign = ("❍")
 
     super(name)
   end

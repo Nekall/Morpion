@@ -9,12 +9,13 @@ require 'views/show'
 
 
 
-  #introduction
+  #introduction visuel
 
   #Creation des joueurs & points
-  puts "Le 1er joueurs peut entrer son pseudo :"
+  puts " "
+  puts "Quel est le pseudo du joueur voulant les ✘ ?"
   player1 = gets.chomp
-  puts "Le 2eme joueur peut entrer son pseudo :"
+  puts "Quel est le pseudo du joueur voulant les ❍ ?"
   player2 = gets.chomp
 
 #Boucle de restart#{@points}
@@ -25,7 +26,7 @@ while true
   #Affichage des stats en début de round
   my_game.get_stats
 
-
+  #Clean et affichage
   system('clear')
   my_game.get_stats
   my_game.show_board
@@ -37,14 +38,15 @@ while true
     #C'est gagné ou pas ?
     if((my_game.victory) == true)
       then my_game.victory_message(1)
+          sleep(3)
           break
     end
 
-    #check si match nul
+    #Check si le match est nul
     if((my_game.equality) == true)
       then break
     end
-
+    #Clean et affichage
     system('clear')
     my_game.get_stats
     my_game.show_board
@@ -54,27 +56,29 @@ while true
     #C'est gagné ou pas ?
     if((my_game.victory) == true)
       then my_game.victory_message(2)
+          sleep(3)
           break
     end
     #check si match nul
     if((my_game.equality) == true)
       then break
     end
+    #Clean et affichage
     system('clear')
     my_game.get_stats
     my_game.show_board
   end
-
+  #Clean et affichage
   system('clear')
   my_game.get_stats
   my_game.show_board
   puts "PARTIE TERMINE"
   puts " "
-  puts "Veux tu rejouer ? "
+  puts "Voulez vous rejouer ? "
   puts "o : Si oui | n : Si non"
   answer = gets.chomp
   if(answer == "o")
-    else abort("Merci d'avoir joué à notre Tic-Tac-Toe ♡")
+    else abort("Merci d'avoir joué à notre Tic-Tac-Toe ♡ ")
   end
 end
 #binding.pry

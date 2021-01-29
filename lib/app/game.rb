@@ -15,16 +15,30 @@ class Game
   def case_selection_for1
     puts "C'est a #{@player1.name} de jouer ✘"
     puts "Quelle case veux tu prendres ?"
+    while true
     print ">"
-    selecase = gets.chomp
+      selecase = gets.chomp
+      if(selecase == "A1" or selecase == "A2" or selecase == "A3" or selecase == "B1" or selecase == "B2" or selecase == "B3" or selecase == "C1" or selecase == "C2" or selecase == "C3")
+        then break
+      else puts "Ce n'est pas une case valide！"
+           puts "Quelle case veux tu prendres ?"
+      end
+    end
     @board.replace_by_cross(selecase)
   end
 #Méthode selection de la case pour le joueur 2
   def case_selection_for2
-    puts "C'est a #{@player2.name} de jouer ○"
+    puts "C'est a #{@player2.name} de jouer ❍"
     puts "Quelle case veux tu prendres ?"
+    while true
     print ">"
-    selecase = gets.chomp 
+      selecase = gets.chomp
+      if(selecase == "A1" or selecase == "A2" or selecase == "A3" or selecase == "B1" or selecase == "B2" or selecase == "B3" or selecase == "C1" or selecase == "C2" or selecase == "C3")
+        then break
+        else puts "Ce n'est pas une case valide！"
+             puts "Quelle case veux tu prendres ?"
+      end
+    end
     @board.replace_by_circle(selecase)
   end
 #Affichage du board
@@ -34,8 +48,8 @@ class Game
 #Methode affichage des stats des joueurs
   def get_stats
     puts " ┌───────────────────────────────────────┐"
-    puts "        #{@player1.show_state}"
-    puts "        #{@player2.show_state}"
+    puts "      #{@player1.show_state}"
+    puts "      #{@player2.show_state}"
     puts " └───────────────────────────────────────┘"
   end
 #Methode de victoir
@@ -62,6 +76,7 @@ class Game
     @counter = (@counter + 1)
     if(@counter == 9)
       then puts "MATCH NUL"
+            sleep(2)
           return true
     end
   end
